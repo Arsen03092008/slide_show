@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Title</title>
+</head>
+<body>
+<center><h1 id="title">деб</h1></center>
+<center><button onclick="left()"><img src="left.png" width="50" height="50"/> </button>
+<img id="emoji" src="dab.png" height="200"/>
+    <button onclick="right()"><img src="right.png" width="50" height="50"/> </button></center>
+</body>
+<script>
+    i=1
+    function left () {
+        i--
+        if (i==0) {
+            i=3
+        }
+        if (i==1) {
+            document.getElementById('title').innerHTML='деб'
+            document.getElementById('emoji').src='dab.png'
+        }
+        if (i==2) {
+            document.getElementById('title').innerHTML='др Нуки'
+             document.getElementById('emoji').src='surprise.png'
+        }
+        if (i==3) {
+             document.getElementById('title').innerHTML='веселуха'
+            document.getElementById('emoji').src='toung.png'
+        }
+    }
+    function right () {
+ i++
+        if (i==4) {
+            i=1
+        }
+        if (i==1) {
+      document.getElementById('title').innerHTML='деб'
+            document.getElementById('emoji').src='dab.png'
+        }
+        if (i==2) {
+      document.getElementById('title').innerHTML='др Нуки'
+             document.getElementById('emoji').src='surprise.png'
+        }
+        if (i==3) {
+      document.getElementById('title').innerHTML='веселуха'
+            document.getElementById('emoji').src='toung.png'
+        }
+    }
+         setInterval(function () {
+             right()
+         }, 1000)
+</script>
+</html>
